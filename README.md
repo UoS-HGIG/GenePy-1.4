@@ -129,7 +129,7 @@ sed -i 's/|/\//g' ALL_genepy_exonic.meta
 ```
 Note: this header file is a dependent file when generating GenePy scores, do not delete this file.
 
-### Compute GenePy Scores
+## Compute GenePy Scores
 
 Once ALL_genepy_exonic.meta file is created, GENEPY_1.3.sh can be run by iterating through a list of desired genes. Note: the make_scores_mat_6.py file __must__ be in the same directory as GENEPY_1.3.sh.
 
