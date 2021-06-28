@@ -46,8 +46,8 @@ sbatch annotation.sh
 grep "^#" FINAL.recode.vcf > vcf_header
 grep -v "^#" FINAL.recoded.vcf > FINAL_noheader.recode.vcf
 
-sbatch --array=1-22 vep.sh
-sbatch vep_x.sh
+sbatch --array=1-22 vep.sh FINAL_noheader.recode.vcf
+sbatch vep_x.sh FINAL_noheader.recode.vcf
 
 # Reassemble the annotated vcf
 seq 1 22 > chr
