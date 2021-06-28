@@ -40,8 +40,6 @@ ln -s /software/location/VEP /your/home/directory/.vep
 Annotate with VEP and ANNOVAR (optional)
 
 ```
-sbatch annotation.sh
-
 # The VEP annotation script will perform the annotation of chromosomes in parallel to speed-up this process 
 grep "^#" FINAL.recode.vcf > vcf_header
 grep -v "^#" FINAL.recoded.vcf > FINAL_noheader.recode.vcf
@@ -54,6 +52,9 @@ seq 1 22 > chr
 grep "^#" ANNO_CHR1.vcf > vcf_header
 while read l; do grep -v "^#" ANNO_CHR${l}.vcf >> temp_vcf; done < chr
 cat vcf_header temp_vcf > FINAL_ANNOTATION.vcf
+
+# Annovar annotation
+sbatch annotation.sh
 ```
 Our FINAL_ANNOTATION.vcf requires some manipulation to convert it into the correct input for GenePy. In addition, VEP annotation leaves some variants without a CADD score, so these need to be annotated online (https://cadd.gs.washington.edu/score), and the scores inserted into our annotated vcf. 
 
