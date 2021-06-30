@@ -139,9 +139,8 @@ mkdir CADD15_RAW
 cut -f 7 ALL_genepy.hg38_multianno.txt | grep -v ";" | grep -v "Gene.refGene" | sort | uniq >gene.list
 
 #Run GenePy
-while read gene:
-do
-sh GenePy_1.3.sh $gene ;
+while read gene;
+do sh GENEPY_1.3.sh $gene;
 done< gene.list
 ```
 
