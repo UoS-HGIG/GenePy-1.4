@@ -126,6 +126,10 @@ rm temp
 
 #Fix VEP formatting issue
 sed -i 's/|/\//g' ALL_genepy_exonic.meta
+
+# Potential VEP formatting issue fix
+# If VEP has recorded a heterozygous genotype in the following way: 1/0, GenePy will not recognise this as a genotype. You can switch the formatting like os
+sed -i 's/1\/0/0\/1/g' ALL_genepy_exonic.meta
 ```
 Note: this header file is a dependent file when generating GenePy scores, do not delete this file.
 
