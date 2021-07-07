@@ -10,10 +10,10 @@ GenePy v1.4 implements the following improvements from v1.3
 * A (multi)sample VCF file (can accept compressed vcf.gz)
 * List of genes to generate GenePy scores (gene.list)
 * List of variant types to include (variant_type.list)
-* Ensembl-VEP installed
+* Ensembl-VEP installed (https://www.ensembl.org/info/docs/tools/vep/script/vep_download.html#new)
 * Ensembl-VEP CADD Plugin
 * GnomAD v.2.1.1 (exomes) sites vcf
-* CADD v.1.6 Installed, with tsv files: whole_genome_SNVs and gnomad genomes indels
+* CADD v.1.6 Installed, with tsv files: whole_genome_SNVs and gnomad genomes indels (https://cadd.gs.washington.edu/download)
 * Optional: ANNOVAR with gnomAD RF flag annotation files
 * Vcftools
 * Python 2.7.x
